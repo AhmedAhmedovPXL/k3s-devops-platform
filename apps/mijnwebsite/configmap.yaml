@@ -1,13 +1,8 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: website-content
-  namespace: mijnwebsite
-data:
-  index.html: |
+index.html: |
     <!DOCTYPE html>
     <html>
     <head>
+      <meta charset="UTF-8">
       <title>Ahmed's DevOps Platform</title>
       <style>
         body { font-family: Arial; background: #1a1a2e; color: white; text-align: center; padding: 50px; }
@@ -17,22 +12,22 @@ data:
       </style>
     </head>
     <body>
-      <h1>🚀 Ahmed's K3s DevOps Platform</h1>
+      <h1>Ahmed's K3s DevOps Platform</h1>
       <div class="card">
-        <h2 class="green">✅ Kubernetes HA Cluster</h2>
-        <p>3 Masters • 3 Workers • AlmaLinux 10</p>
+        <h2 class="green">&#10003; Kubernetes HA Cluster</h2>
+        <p>3 Masters | 3 Workers | AlmaLinux 10</p>
       </div>
       <div class="card">
-        <h2 class="green">✅ GitOps via ArgoCD</h2>
+        <h2 class="green">&#10003; GitOps via ArgoCD</h2>
         <p>Automatische deployments via GitHub</p>
       </div>
       <div class="card">
-        <h2 class="green">✅ Monitoring via Grafana</h2>
-        <p>Prometheus • Alertmanager • 486 alert rules</p>
+        <h2 class="green">&#10003; Monitoring via Grafana</h2>
+        <p>Prometheus | Alertmanager | 486 alert rules</p>
       </div>
       <div class="card">
-        <h2 class="green">✅ Longhorn Storage</h2>
-        <p>Gedistribueerd • 3x replicatie • Automatische failover</p>
+        <h2 class="green">&#10003; Longhorn Storage</h2>
+        <p>Gedistribueerd | 3x replicatie | Automatische failover</p>
       </div>
     </body>
     </html>
