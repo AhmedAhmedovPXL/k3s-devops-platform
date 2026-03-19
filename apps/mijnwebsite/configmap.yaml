@@ -1,4 +1,10 @@
-index.html: |
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: website-content
+  namespace: mijnwebsite
+data:
+  index.html: |
     <!DOCTYPE html>
     <html>
     <head>
