@@ -13,27 +13,15 @@ spec:
       labels:
         app: mijnwebsite
     spec:
-      initContainers:
-      - name: copy-content
-        image: busybox
-        command: ['sh', '-c', 'cp /content/index.html /data/index.html']
-        volumeMounts:
-        - name: website-content
-          mountPath: /content
-        - name: website-data
-          mountPath: /data
       containers:
       - name: nginx
         image: nginx:latest
         ports:
         - containerPort: 80
         volumeMounts:
-        - name: website-data
+        - name: website-content
           mountPath: /usr/share/nginx/html
       volumes:
-      - name: website-data
-        persistentVolumeClaim:
-          claimName: website-data
       - name: website-content
         configMap:
           name: website-content
